@@ -5,18 +5,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>A/B Player</title>
+    <title>Acusta Player</title>
     <meta
       name="description"
-      content="Toggle between two audio files to compare"
+      content="Toggle between two audio files to see how Acusta improves the listening"
     />
-    <meta name="author" content="Matt Bartley" />
+    <meta name="author" content="Matt Bartley, Juan Diego Coronel" />
 
-    <meta property="og:title" content="A/B Audio Player" />
+    <meta property="og:title" content="Acusta Player" />
     <meta property="og:type" content="website" />
     <meta
       property="og:description"
-      content="Toggle between two audio files to compare"
+      content="Toggle between two audio files to see how Acusta improves the listening"
     />
     <meta property="og:image" content="image.png" />
 
@@ -40,15 +40,11 @@
 
   <body>
     <div id="intro">
-      <h1>A/B Player</h1>
-      <div id="tagline">
-        A zero-dependency HTML, CSS, Javascript audio player.
-      </div>
+      <h1>Acusta Player</h1>
 
-      <a href="https://github.com/mattbartley/AB-Audio-Player" target="_blank"><i class="fa-brands fa-github"></i> Open Source on GitHub</a>
-      <p>Toggle between two audio files to compare them side-by-side.</p>
+      <p>Toggle between two songs to compare<br>how Acusta will enhance your listening.</p>
     </div>
-    <div class="player__wrapper">
+    <div id="player__wrapper" class="player__wrapper">
       <div class="progress__container" id="progress">
         <div class="progress__bar" id="progress__fill"></div>
       </div>
@@ -59,7 +55,7 @@
           onclick="playSoundA()"
           disabled="true"
         >
-          A
+          ORIGINAL
         </button>
         <button
           class="ab__button"
@@ -67,7 +63,7 @@
           onclick="playSoundB()"
           disabled="true"
         >
-          B
+          ACUSTA
         </button>
       </div>
       <div class="play__stop__controls">
@@ -88,7 +84,13 @@
           <i class="fa-solid fa-stop"></i>
         </button>
       </div>
+      <button class="collapsible">More Songs</button>
+      <div class="content">
+        <ul id="playlist" class="playlist__items"></ul>
+      </div>
+      <script> src="playlist.js"</script>
     </div>
+    <script src="./js/playlist.js"></script>
     <script src="./js/ab-player.js"></script>
   </body>
 </html>

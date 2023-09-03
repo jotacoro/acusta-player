@@ -92,13 +92,17 @@ body {
 }
 
 .player__wrapper {
-  border-radius: 50px;
+  border-radius: 30px;
   background: #e6e6e6;
   box-shadow: 20px 20px 37px #cdcdcd, -20px -20px 37px #ffffff;
   padding: 4vh 5.5vw 4.5vh 5.5vw;
   max-width: 500px;
   align-self: start;
   margin: 0 2vw;
+}
+
+.normal__version__style {
+  filter: grayscale(90%) blur(0.5px);
 }
 
 .ab__controls {
@@ -195,4 +199,40 @@ button:hover {
 
 #progress__fill {
   width: 0%;
+}
+
+.collapsible {
+  background-color: #2da87b;
+  color: white;
+  cursor: pointer;
+  padding: 6px;
+  margin-top: 2rem;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #17694b;
+}
+
+.content {
+  max-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+#playlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.playSong__button {
+  width: 100%;
+  font-size: 10px;
 }
